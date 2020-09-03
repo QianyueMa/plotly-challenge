@@ -10,7 +10,7 @@ The dataset reveals that a small handful of microbial species (also called opera
 - - -
 
 ## Part 1: Plotly
-*1. Use the D3 library to read in samples.json .
+1. Use the D3 library to read in data samples.json .
 2. Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
 - Use sample_values as the values for the bar chart.
 - Use otu_ids as the labels for the bar chart. 
@@ -24,7 +24,7 @@ The dataset reveals that a small handful of microbial species (also called opera
 5. Display each key-value pair from the metadata JSON object somewhere on the page.
 6. Update all of the plots any time that a new sample is selected.
 7. Additionally, create a creative layout for the dashboard. 
-* The dashboard's preview:  
+  * The dashboard's preview:  
 
 ## Part 2: Advanced Challenge Assignment (Optional)
 * Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/ to plot the weekly washing frequency of the individual.
