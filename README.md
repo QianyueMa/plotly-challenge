@@ -30,13 +30,13 @@ The dataset reveals that a small handful of microbial species (also called opera
 6. Update all of the plots any time that a new sample is selected.
 
 7. Additionally, create a creative layout for the dashboard. 
-* The dashboard's preview:  
+* The dashboard's preview:
 
 #### Deployment
-Deploy your app to a free static page hosting service, such as GitHub Pages. Submit the links to your deployment and your GitHub repo.
+Deploy the app to a free static page hosting service, such as GitHub Pages. Submit the links to the deployment and the GitHub repo.
 
 
 ## Part 2: Advanced Challenge Assignment (Optional)
-* Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/ to plot the weekly washing frequency of the individual.
+* Adapt the Gauge Chart from <https://plot.ly/javascript/gauge-charts/> to plot the weekly washing frequency of the individual.
 * Mdify the example gauge code to account for values ranging from 0 through 9. 
 * Update the chart whenever a new sample is selected.
