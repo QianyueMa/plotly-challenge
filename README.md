@@ -5,7 +5,7 @@ Uses Plotly and D3.js to build an interactive dashboard to explore the Belly But
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
 * [Belly Button Biodiversity Data](data/samples.json), with Hulcr and colleagues' (2012) [original research publication showcase](http://robdunnlab.com/projects/belly-button-biodiversity/) and the [results and data](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/).
   * Project Publications: Hulcr, J., Latimer, A. M., Henley, J. B., Rountree, N. R.**, Fierer, N., Lucky, A., Lowman, M. D., Dunn RR 2012. A jungle in there: bacteria in belly buttons are highly diverse, but predictable. PLoS ONE 7(11): e47712. doi:10.1371/journal.pone.0047712
-![preview](Images/bacteria_diversity.png)
+ ![preview](Images/bacteria_diversity.png)
 
 - - -
 
@@ -31,6 +31,9 @@ The dataset reveals that a small handful of microbial species (also called opera
 
 7. Additionally, create a creative layout for the dashboard. 
 * The dashboard's preview:  
+
+### Deployment
+Deploy your app to a free static page hosting service, such as GitHub Pages. Submit the links to your deployment and your GitHub repo.
 
 
 ## Part 2: Advanced Challenge Assignment (Optional)
