@@ -16,15 +16,15 @@ The dataset reveals that a small handful of microbial species (also called opera
 - Use otu_ids as the labels for the bar chart. 
 - Use otu_labels as the hovertext for the chart.
 3. Create a bubble chart that displays each sample. 
-- Use otu_ids for the x values.
-- Use sample_values for the y values.
-- Use sample_values for the marker size.
-- Use otu_ids for the marker colors. Use otu_labels for the text values.
+  - Use otu_ids for the x values.
+  - Use sample_values for the y values.
+  - Use sample_values for the marker size.
+  - Use otu_ids for the marker colors. Use otu_labels for the text values.
 4. Display the sample metadata, i.e., an individual's demographic information.
 5. Display each key-value pair from the metadata JSON object somewhere on the page.
 6. Update all of the plots any time that a new sample is selected.
 7. Additionally, create a creative layout for the dashboard. 
-** The dashboard's preview:  
+* The dashboard's preview:  
 
 ## Part 2: Advanced Challenge Assignment (Optional)
 * Adapt the Gauge Chart from https://plot.ly/javascript/gauge-charts/ to plot the weekly washing frequency of the individual.
