@@ -4,8 +4,9 @@ Uses Plotly and D3.js to build an interactive dashboard to explore the Belly But
 
 ## Dataset
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
-* [Belly Button Biodiversity Data](data/samples.json), with Hulcr and colleagues' (2012)  [original research publication showcase](http://robdunnlab.com/projects/belly-button-biodiversity/) and the [results and data](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/).
+* [Belly Button Biodiversity Data](data/samples.json), with Hulcr and colleagues' (2012) [original research publication showcase](http://robdunnlab.com/projects/belly-button-biodiversity/) and the [results and data](http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/).
 ![preview](Images/bacteria_diversity.png)
+![preview](Images/bacteria.jpg)
 
 - - -
 
