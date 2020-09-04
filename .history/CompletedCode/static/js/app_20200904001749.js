@@ -17,11 +17,10 @@ function getData() {
             demographicInfo.append("h5").text(`${key}:${value}`);
         });
     });
-};
+});
 
 // Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
 function buildChart() {
-
     var url = `data/data.json/${samples}`;
 
     d3.json(url).then( (data) => {
@@ -40,39 +39,28 @@ function buildChart() {
             // Use sample_values as the values for the bar chart.
             y: sampleValue,
             // Use otu_labels as the hovertext for the chart.
-            type: "bar",
-            orientation: "h",
-            test: otuLabel
-        };
-
-        // Create a bubble chart that displays each sample.
-        var trace2 = {
-            x: otuTop,
-            y: sampleValue,
-            mode:"markers", 
-            marker:{
-              size: sampleValue,
-              color: otuTop,
-              colorscale: "Rainbow",
-              labels: otuLabel,
-              type: 'scatter',
-              opacity: 0.3
-            }
+            type: "bar"
         };
 
         var data1 = [trace1];
-        var data2 = [trace2];
 
-        var layout = {
-            title: "Top 10 OTUs Found in the Participant",
-            xaxis: { title: 'OTU ID' },
+        var layout1 = {
+            title: "Top 10 OTUs Found in the Participant"
         };
 
-        // Plot the chart
-        Plotly.newPlot("bar", data1, layout);
-        
-        Plotly.newPlot("bubble", data2, layout);
-
-    });
+        // Plot the chart to a div tag with id "plot"
+        Plotly.newPlot("bar", data1, layout1);
+    })
 };
 
+
+
+// Create a bubble chart that displays each sample.
+// Use otu_ids for the x values.
+// Use sample_values for the y values.
+// Use sample_values for the marker size.
+// Use otu_ids for the marker colors.
+// Use otu_labels for the text values.
+
+// Display each key-value pair from the metadata JSON object somewhere on the page.
+// Update all of the plots any time that a new sample is selected

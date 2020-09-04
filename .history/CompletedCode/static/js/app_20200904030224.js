@@ -45,20 +45,18 @@ function buildChart() {
             test: otuLabel
         };
 
-        // Create a bubble chart that displays each sample.
         var trace2 = {
             x: otuTop,
             y: sampleValue,
             mode:"markers", 
             marker:{
-              size: sampleValue,
-              color: otuTop,
+              size: size_value,
+              color: x_value,
               colorscale: "Rainbow",
-              labels: otuLabel,
+              labels: label,
               type: 'scatter',
               opacity: 0.3
-            }
-        };
+            };
 
         var data1 = [trace1];
         var data2 = [trace2];
@@ -68,11 +66,19 @@ function buildChart() {
             xaxis: { title: 'OTU ID' },
         };
 
-        // Plot the chart
+        // Plot the chart to a div tag with id "plot"
         Plotly.newPlot("bar", data1, layout);
-        
-        Plotly.newPlot("bubble", data2, layout);
+
 
     });
 };
+
+
+
+// Create a bubble chart that displays each sample.
+// Use otu_ids for the x values.
+// Use sample_values for the y values.
+// Use sample_values for the marker size.
+// Use otu_ids for the marker colors.
+// Use otu_labels for the text values.
 

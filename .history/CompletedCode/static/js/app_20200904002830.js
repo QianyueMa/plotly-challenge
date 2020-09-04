@@ -22,17 +22,25 @@ function getData() {
 // Create a horizontal bar chart with a dropdown menu to display the top 10 OTUs found in that individual.
 function buildChart() {
 
-    var url = `data/data.json/${samples}`;
+    var url = `/samples/${sample}`;
+    d3.json(url).then(function (response){
+        // if (error) return console.log(error);
+        var x_value = response["otu_ids"];
+        var y_value = response["sample_values"];
+        var size_value = response["sample_values"];
+        var label = response["otu_labels"];
 
-    d3.json(url).then( (data) => {
+    // var url = `data/data.json/${samples}`;
+
+    // d3.json(url).then( (data) => {
         
-        var otuId = data.otu_ids;
-        // Sort and slice the top 10 OTUs in descending order, and reverse the array to accommodate Plotly's defaults
-        var results = data.sort( (a, b) => b.otuId - a.otuId).slice(0, 10).reverse();
+    //     var otuId = data.otu_ids;
+    //     // Sort and slice the top 10 OTUs in descending order, and reverse the array to accommodate Plotly's defaults
+    //     var results = data.sort( (a, b) => b.otuId - a.otuId).slice(0, 10).reverse();
 
-        var otuTop = otuId.map(d => d);
-        var sampleValue = results.sample_values;
-        var otuLabel = results.otu_labels;
+    //     var otuTop = otuId.map(d => d);
+    //     var sampleValue = results.sample_values;
+    //     var otuLabel = results.otu_labels;
 
         var trace1 = {
             // Use otu_ids as the labels for the bar chart.
@@ -45,34 +53,24 @@ function buildChart() {
             test: otuLabel
         };
 
-        // Create a bubble chart that displays each sample.
-        var trace2 = {
-            x: otuTop,
-            y: sampleValue,
-            mode:"markers", 
-            marker:{
-              size: sampleValue,
-              color: otuTop,
-              colorscale: "Rainbow",
-              labels: otuLabel,
-              type: 'scatter',
-              opacity: 0.3
-            }
-        };
-
         var data1 = [trace1];
-        var data2 = [trace2];
 
         var layout = {
             title: "Top 10 OTUs Found in the Participant",
             xaxis: { title: 'OTU ID' },
         };
 
-        // Plot the chart
+        // Plot the chart to a div tag with id "plot"
         Plotly.newPlot("bar", data1, layout);
-        
-        Plotly.newPlot("bubble", data2, layout);
 
     });
 };
 
+
+
+// Create a bubble chart that displays each sample.
+// Use otu_ids for the x values.
+// Use sample_values for the y values.
+// Use sample_values for the marker size.
+// Use otu_ids for the marker colors.
+// Use otu_labels for the text values.
