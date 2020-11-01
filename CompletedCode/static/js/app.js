@@ -1,17 +1,10 @@
 // Use the D3 library to read data in data.json.
-function getData() {
-    // Display the sample metadata, i.e., an individual's demographic information.
-    d3.json("data/data.json/metadata").then( (data) => {
+
+// Display the sample metadata, i.e., an individual's demographic information.
+// {"id": 940, "ethnicity": "Caucasian", "gender": "F", "age": 24.0, "location": "Beaufort/NC", "bbtype": "I", "wfreq": 2.0}, ...
+function getMetadata() {
+    d3.json("data/samples.json").then( (data) => {
         var demographicInfo = d3.select("#sample-metadata").html("");
-            // {
-            //     "id":940,
-            //     "ethnicity":"Caucasian",
-            //     "gender":"F",
-            //     "age":24.0,
-            //     "location":"Beaufort/NC",
-            //     "bbtype":"I",
-            //     "wfreq":2.0
-            //  },
         // Display each key-value pair from the metadata JSON object somewhere on the page.
         Object.entries(data).forEach(([key, value]) => {   
             demographicInfo.append("h5").text(`${key}:${value}`);

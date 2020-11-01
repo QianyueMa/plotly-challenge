@@ -3,8 +3,8 @@
 
 ## Navigation of the repo: Submission
 
-This completed files are in the `D3_data_journalism` directory.
-The repo is published [here](https://qianyuema.github.io/D3-challenge/).
+This completed files are in the `CompletedCode` directory.
+The repo is published [here](https://qianyuema.github.io/plotly-challenge/CompletedCode).
 
 ## Dataset
 The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, in the study) were present in more than 70% of people, while the rest were relatively rare.
@@ -15,7 +15,7 @@ The dataset reveals that a small handful of microbial species (also called opera
 - - -
 
 ## Part 1: Plotly
-* Refer to the [Plotly.js documentation](https://plot.ly/javascript/) when building the plots.
+*Refer to the [Plotly.js documentation](https://plot.ly/javascript/) when building the plots.
 
 1. Use the D3 library to read in data `samples.json`.
 
@@ -23,7 +23,6 @@ The dataset reveals that a small handful of microbial species (also called opera
 * Use `sample_values` as the values for the bar chart.
 * Use `otu_ids` as the labels for the bar chart.
 * Use `otu_labels` as the hovertext for the chart.
-  ![bar Chart](Images/hw01.png)
 
 3. Create a bubble chart that displays each sample. 
 * Use `otu_ids` for the x values.
@@ -31,12 +30,10 @@ The dataset reveals that a small handful of microbial species (also called opera
 * Use `sample_values` for the marker size.
 * Use `otu_ids` for the marker colors.
 * Use `otu_labels` for the text values.
-![Bubble Chart](Images/bubble_chart.png)
 
 4. Display the sample metadata, i.e., an individual's demographic information.
 
 5. Display each key-value pair from the metadata JSON object somewhere on the page.
-![hw](Images/hw03.png)
 
 6. Update all of the plots any time that a new sample is selected.
 
@@ -49,8 +46,4 @@ The dataset reveals that a small handful of microbial species (also called opera
 * Adapt the Gauge Chart from <https://plot.ly/javascript/gauge-charts/> to plot the weekly washing frequency of the individual.
 * Modify the example gauge code to account for values ranging from 0 through 9. 
 * Update the chart whenever a new sample is selected.
-![Weekly Washing Frequency Gauge](Images/gauge.png)
 
-
-### APP Deployment
-Deploy the `app` to a free static page hosting service, such as GitHub Pages. Submit the links to the deployment and the GitHub repo.
