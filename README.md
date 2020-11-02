@@ -38,8 +38,6 @@ The dataset reveals that a small handful of microbial species (also called opera
 6. Update all of the plots any time that a new sample is selected.
 
 7. Additionally, create a creative layout for the dashboard. 
-* The dashboard's `preview`:
-![hw](Images/hw02.png)
 
 
 ## Part 2: Advanced Challenge Assignment (Optional)
@@ -47,3 +45,5 @@ The dataset reveals that a small handful of microbial species (also called opera
 * Modify the example gauge code to account for values ranging from 0 through 9. 
 * Update the chart whenever a new sample is selected.
 
+* The dashboard's `preview`:
+![hw](Images/hw02.png)
