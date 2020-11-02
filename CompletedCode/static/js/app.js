@@ -16,9 +16,10 @@ function getName() {
                 .text(name)
                 .property('value'),
 
-                // Initialize page with default metadata and plots   
+                // The default metadata and plots; Initialize page with the default set of data
                 getMetadata(subject.names[0]),
                 buildCharts(subject.names[0]),
+                
             ),
         );
 };
@@ -53,6 +54,8 @@ function getMetadata(id) {
 getMetadata();
 
 
+// Fetch New Data Each Time a New Sample is Selected
+// <select id="selDataset" onchange="optionChanged(this.value)"></select>
 // Function called by DOM changes
 function optionChanged(id) {
     getMetadata(id);
@@ -117,9 +120,9 @@ function buildCharts(id) {
         var bubbleData = [bubbleTrace];
 
         // Layout set up
-        var Layout = {
+        var layout = {
             title: {
-                text: `Top 10 OTUs Found in the Subject ${id}`,
+                text: `Top 10 OTUs Found in Subject ${id}`,
                 font: {
                     family: 'Arial',
                     size: 24,
@@ -131,10 +134,9 @@ function buildCharts(id) {
             };
         
         // Plot the chart
-        Plotly.newPlot('bar', barData, Layout);
-        Plotly.newPlot('bubble', bubbleData, Layout);
+        Plotly.newPlot('bar', barData, layout);
+        Plotly.newPlot('bubble', bubbleData, layout);
 
     });
 };
 
-buildCharts();
